@@ -1,8 +1,24 @@
 <div class="panel-body">
-  <img src="{{card.image}}" class="img-responsive" alt="">
+  {{#if mistery}}
+    <img src="assets/images/mistery_card.png" class="img-responsive" alt="">
+  {{else}}
+    {{#if card}}
+      <img src="{{card.image}}" class="img-responsive" alt="{{card.name}}">
+    {{else}}
+      <img src="assets/images/select_card.png" class="img-responsive" alt="">
+    {{/if}}
+  {{/if}}
 </div>
 <div class="panel-heading">
   <h3 class="panel-title">
-    {{card.name}}
+    {{#if mistery}}
+      ???
+    {{else}}
+      {{#if card}}
+        {{card.name}}
+      {{else}}
+        Choose card!
+      {{/if}}
+    {{/if}}
   </h3>
 </div>
