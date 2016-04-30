@@ -32,9 +32,9 @@ export default Ember.Service.extend({
     if (win) {
       set(profile, 'wins', this.get('wins') + 1);
     }
-  }
+  },
 
-  reset(name) {
+  reset() {
     this.get('_profile').clear();
   }
 });

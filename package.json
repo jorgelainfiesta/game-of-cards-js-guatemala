@@ -36,6 +36,7 @@
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.4",
     "ember-local-storage": "1.1.0",
+    "ember-one-way-controls": "0.6.4",
     "ember-resolver": "^2.0.3"
   }
 }

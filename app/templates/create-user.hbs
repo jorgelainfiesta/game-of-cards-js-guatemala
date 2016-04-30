@@ -9,10 +9,20 @@
 														<label for="userName" class="col-md-2 control-label">User Name</label>
 
 														<div class="col-md-10">
-																<input type="text" class="form-control" id="userName" placeholder="Enter user name">
+																{{one-way-input
+																		update=(action 'updateName')
+																		class="form-control"
+																		placeholder="Enter user name"
+																}}
 														</div>
 												</div>
-												<button class="btn btn-primary">Save &amp; play</button>
+												<button
+													class="btn btn-primary"
+													onclick={{action (action 'createProfile' name)}}
+													disabled={{mustFill}}
+												>
+													Save &amp; play
+												</button>
 										</fieldset>
 								</form>
 						</div>
