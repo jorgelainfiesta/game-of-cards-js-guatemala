@@ -29,9 +29,10 @@
             <ul class="nav navbar-nav navbar-right">
               {{#if profile.authenticated}}
                 <li class="loging">
-                  {{#link-to 'profile'}}
-                    Welcome {{profile.name}}!
-                  {{/link-to}}
+                  <a onclick={{action (action 'exitProfile')}}>
+                    Welcome <em>{{profile.name}}</em>!
+                    Exit &raquo;
+                  </a>
                 </li>
               {{else}}
                 <li>

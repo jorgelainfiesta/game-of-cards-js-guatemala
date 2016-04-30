@@ -54,3 +54,12 @@ body {
 .cards-all .col-sm-3:nth-child(4n+1){
   clear: both;
 }
+
+.footer-game.playing-now {
+  display: none;
+}
+
+.winner-card {
+  margin: 0 auto !important;
+  float: none !important;
+}

@@ -23,8 +23,9 @@ export default Ember.Service.extend({
   register(name) {
     const profile = this.get('_profile');
 
-    this.reset();
     set(profile, 'name', name);
+    set(profile, 'wins', 0);
+    set(profile, 'games', 0);
   },
 
   recordGame(win) {

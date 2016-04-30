@@ -7,8 +7,8 @@ const {
 
 export default Ember.Service.extend({
   _allCards: [],
-  _weakMax: 200,
-  _midMax: 300,
+  _weakMax: 300,
+  _midMax: 700,
 
   allCards: computed.readOnly('_allCards'),
 

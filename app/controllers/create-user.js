@@ -16,7 +16,9 @@ export default Ember.Controller.extend({
     updateName(name) {
       this.set('name', name);
     },
-    createProfile(name) {
+    createProfile(name, event) {
+      event.preventDefault();
+
       if (this.get('mustFill')) {
         return;
       }

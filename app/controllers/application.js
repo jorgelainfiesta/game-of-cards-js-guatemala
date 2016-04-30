@@ -5,5 +5,13 @@ const {
 } = Ember;
 
 export default Ember.Controller.extend({
-  profile: service()
+  profile: service(),
+
+  actions: {
+    exitProfile(event) {
+      event.preventDefault();
+      this.get('profile').reset();
+      this.transitionToRoute('index');
+    }
+  }
 });
