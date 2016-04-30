@@ -7,11 +7,11 @@ const {
 } = Ember;
 
 export default Ember.Service.extend({
-  profile: storageFor('profile'),
+  _profile: storageFor('profile'),
 
-  name: computed.readOnly('profile.name'),
-  wins: computed.readOnly('profile.wins'),
-  games: computed.readOnly('profile.games'),
+  name: computed.readOnly('_profile.name'),
+  wins: computed.readOnly('_profile.wins'),
+  games: computed.readOnly('_profile.games'),
   loses: computed('wins', 'games', {
     get() {
       return this.get('games') - this.get('wins');
@@ -19,14 +19,14 @@ export default Ember.Service.extend({
   }),
 
   register(name) {
-    const profile = this.get('profile');
+    const profile = this.get('_profile');
 
     this.reset();
     set(profile, 'name', name);
   },
 
   recordGame(win) {
-    const profile = this.get('profile');
+    const profile = this.get('_profile');
 
     set(profile, 'games', this.get('games') + 1);
     if (win) {
@@ -35,6 +35,6 @@ export default Ember.Service.extend({
   }
 
   reset(name) {
-    this.get('profile').clear();
+    this.get('_profile').clear();
   }
 });
