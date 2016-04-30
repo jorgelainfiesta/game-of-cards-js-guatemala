@@ -6,6 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('create-user');
+  this.route('cards');
+  this.route('match');
 });
 
 export default Router;

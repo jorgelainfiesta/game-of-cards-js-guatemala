@@ -1,0 +1,52 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin: 80px 0 200px;
+}
+.footer-game {
+    padding: 10px 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    min-height: 150px;
+    background-color: #eee;
+    -webkit-box-shadow: 0px -5px 30px 0px rgba(50, 50, 50, 0.54);
+    -moz-box-shadow: 0px -5px 30px 0px rgba(50, 50, 50, 0.54);
+    box-shadow: 0px -5px 30px 0px rgba(50, 50, 50, 0.54);
+}
+.footer-game .card-preview {
+    background-color: #FFF;
+    padding: 10px;
+}
+.footer-game .score {
+    font-size: 18px;
+    min-height: 120px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+.footer-game .score-number {
+    font-size: 40px;
+    display: block;
+    font-weight: bold;
+}
+.logo {
+    max-height: 100%;
+    display: inline-block !important;
+}
+.navbar-brand {
+    padding: 10px;
+    vertical-align: middle;
+    line-height: 60px;
+}
+.nav .material-icons {
+    font-size: 16px;
+}
+
+.navbar-brand > img {
+  max-width: 30px;
+  display: inline-block;
+}
