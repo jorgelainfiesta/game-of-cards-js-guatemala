@@ -29,6 +29,7 @@ export default Ember.Controller.extend({
           this.set('userCard', '');
           this.set('botCard', '');
           this.set('mistery', true);
+          this.set('model.userCards', game.drawCards());
         }, 2000);
 
       }, Math.random() * 2000);
