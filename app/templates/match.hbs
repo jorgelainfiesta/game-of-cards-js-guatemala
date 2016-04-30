@@ -38,33 +38,26 @@
 						</div>
 						<div class="col-sm-5">
 								<div class="row">
-										<div class="col-xs-4">
-												<div class="card-preview">
-														<img src="http://localhost:3000/assets/images/42_Jubilo-150x150.jpg" class="img-responsive" alt="">
-												</div>
-										</div>
-										<div class="col-xs-4">
-												<div class="card-preview">
-														<img src="http://localhost:3000/assets/images/42_Jubilo-150x150.jpg" class="img-responsive" alt="">
-												</div>
-										</div>
-										<div class="col-xs-4">
-												<div class="card-preview">
-														<img src="http://localhost:3000/assets/images/42_Jubilo-150x150.jpg" class="img-responsive" alt="">
-												</div>
-										</div>
-
+                  {{#each model.userCards as |card|}}
+                    <div class="col-xs-4">
+                      {{card-box card=card onClick=(action 'chooseCard' card)}}
+                    </div>
+                  {{/each}}
 								</div>
 						</div>
 						<div class="col-sm-5">
 								<div class="row">
 										<div class="col-xs-4">
-                      <span class="score text-success">Wins: <span class="score-number">20</span></span>
+                      <span class="score text-success">
+                        Wins: <span class="score-number">{{profile.wins}}</span>
+                      </span>
 										</div>
 										<div class="col-xs-4"><span class="score text-defaul">
-                      Losses: <span class="score-number">20</span></span>
+                      Losses: <span class="score-number">{{profile.losses}}</span></span>
 										</div>
-										<div class="col-xs-4"><span class="score text-info">Games: <span class="score-number">20</span></span>
+										<div class="col-xs-4"><span class="score text-info">
+                      Games: <span class="score-number">{{profile.games}}</span>
+                    </span>
 										</div>
 								</div>
 						</div>
