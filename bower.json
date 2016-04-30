@@ -9,7 +9,8 @@
     "jquery": "2.1.4",
     "loader.js": "^3.5.0",
     "bootstrap": "3.3.6",
-    "bootstrap-material-design": "0.3.0"
+    "bootstrap-material-design": "0.3.0",
+    "blob-polyfill": "^1.0.20150320"
   },
   "resolutions": {
     "ember": "2.2.0"
