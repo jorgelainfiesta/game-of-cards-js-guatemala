@@ -27,8 +27,19 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li class="loging"><a href="javascript:void(0)">Login</a></li>
-                <li class="loggedIn"><a href="#">Welcome: Daniels</a></li>
+              {{#if profile.authenticated}}
+                <li class="loging">
+                  {{#link-to 'profile'}}
+                    Welcome {{profile.name}}!
+                  {{/link-to}}
+                </li>
+              {{else}}
+                <li>
+                  {{#link-to 'create-user'}}
+                    Create user
+                  {{/link-to}}
+                </li>
+              {{/if}}
             </ul>
         </div>
     </div>

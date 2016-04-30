@@ -8,7 +8,6 @@ export default Ember.Route.extend({
   game: service(),
 
   model() {
-    return this.get('game.allCards');
+    return this.get('game').loadCards();
   }
-
 });

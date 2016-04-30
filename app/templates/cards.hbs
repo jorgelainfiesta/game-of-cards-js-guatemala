@@ -1,37 +1,9 @@
-<div class="container">
+<div class="container cards-all">
 		<div class="row">
+			{{#each model as |card|}}
 				<div class="col-sm-3">
-						<div class="panel panel-default">
-								<div class="panel-body">
-										<img src="http://localhost:3000/assets/images/97_Boom_Boom.jpg" class="img-responsive" alt="">
-								</div>
-						</div>
+						{{card-box card=card}}
 				</div>
-
-				<div class="col-sm-3">
-						<div class="panel panel-default">
-								<div class="panel-body">
-										<img src="http://localhost:3000/assets/images/87_Venom.jpg" class="img-responsive" alt="">
-								</div>
-						</div>
-				</div>
-
-				<div class="col-sm-3">
-						<div class="panel panel-default">
-								<div class="panel-body">
-										<img src="http://localhost:3000/assets/images/75_Magneto_Regresa.jpg" class="img-responsive" alt="">
-								</div>
-						</div>
-				</div>
-
-				<div class="col-sm-3">
-						<div class="panel panel-default">
-								<div class="panel-body">
-										<img src="http://localhost:3000/assets/images/42_Jubilo.jpg" class="img-responsive" alt="">
-								</div>
-						</div>
-				</div>
-
+			{{/each}}
 		</div>
-
 </div>

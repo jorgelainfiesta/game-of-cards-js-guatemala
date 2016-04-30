@@ -12,6 +12,8 @@ export default Ember.Service.extend({
   name: computed.readOnly('_profile.name'),
   wins: computed.readOnly('_profile.wins'),
   games: computed.readOnly('_profile.games'),
+  authenticated: computed.notEmpty('name'),
+
   loses: computed('wins', 'games', {
     get() {
       return this.get('games') - this.get('wins');
